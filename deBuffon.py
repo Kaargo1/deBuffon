@@ -35,11 +35,12 @@ def calculate():
 	return (len(needles)*2)/t
 
 
-listOfTests = []
+listOfTests = [0 for x in range(0, 100)]
 testedTests = []
 for j in range(100):
 	for i in range(100):
-		listOfTests.append(calculate())
+		#listOfTests.append(calculate())
+		listOfTests[i] = calculate()
 	#average
 	testedTests.append(sum(listOfTests)/len(listOfTests))
 
